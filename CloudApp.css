@@ -5,3 +5,276 @@ Autor: Julio Di Nicola
 URL: http://juliodinicola.es
 Licencia: 
 */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	background: url('data:image/png;charset=utf-8;base64,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');
+	color: #333;
+	font-style: normal;
+	font-size: 13px;
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	width: 640px;
+	margin: 0 auto;
+	padding: 48px 18px;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: normal;
+	margin: 0 0 14px 0;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0 0 14px 0;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 14px 0;
+}
+
+h4 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0 0 14px 0;
+}
+
+p {
+	line-height: 24px;
+	margin: 0 0 24px 0;
+}
+
+ol {
+	list-style: inside decimal;
+	margin: 0 0 24px 0;
+}
+
+ol li {
+	margin: 0 0 8px 0;
+}
+
+ul {
+	list-style: inside disc;
+	margin: 0 0 24px 0;
+}
+
+ul li {
+	margin: 0 0 8px 0;
+}
+
+dl {
+	margin: 0 0 24px 0;
+}
+
+dl dt {
+	font-weight: bold;
+	margin: 0 0 8px 0;
+}
+
+dl dd {
+	margin: 0 0 12px 0;
+}
+
+blockquote {
+	border-left: 3px solid #e5e5e5;
+	color: #666;
+	font-family: Georgia,serif;
+	margin: 0 0 24px 0;
+	padding: 0 0 0 24px;
+	quotes: none;
+}
+
+table {
+	margin: 0 0 24px 0;
+	width: 100%;
+}
+
+table caption {
+	font-weight: bold;
+	margin: 0 0 18px 0;
+	text-align: left;
+}
+
+table thead {
+	border-top: 2px solid #e5e5e5;
+}
+
+table thead tr th {
+	font-weight: bold;
+	padding: 8px 0;
+	text-align: left;
+}
+
+table tbody tr td {
+	border-top: 1px solid #e5e5e5;
+	padding: 8px 0;
+}
+
+table tfoot {
+	border-bottom: 2px solid #e5e5e5;
+}
+
+table tfoot tr td {
+	border-top: 1px solid #e5e5e5;
+	padding: 8px 0;
+}
+
+a:link, a:visited {
+	color: #33a4f4;
+	text-decoration: none;
+}
+
+abbr {
+	border-bottom: 1px dotted #bbb;
+	color: #666;
+	text-transform: uppercase;
+}
+
+strong {
+	font-weight: bold;
+}
+
+b {
+	font-weight: bold;
+}
+
+cite {
+	color: #666;
+	font-style: italic;
+}
+
+code {
+	font: 12px Monaco, monospace;
+}
+
+del {
+	color: #666;
+	font-style: line-through;
+}
+
+dfn {
+	border-bottom: 1px dotted #bbb;
+	font-style: italic;
+}
+
+em {
+	font-style: italic;
+}
+
+i {
+	font-style: italic;
+}
+
+ins {
+	color: #e93043;
+	text-decoration: none;
+}
+
+kbd {
+	font: 12px Monaco, monospace;
+}
+
+mark {
+	background: #ff9;
+	color: #533b18;
+	padding: 2px 3px;
+}
+
+samp {
+	font: 12px Monaco, monospace;
+}
+
+small {
+	font-size: 11px;
+}
+
+sup {
+	font-size: 11px;
+	vertical-align: super;
+}
+
+sub {
+	font-size: 11px;
+	vertical-align: sub;
+}
+
+var {
+	font: 12px Monaco, monospace;
+}
+
+.highlight {
+	margin: 0 0 24px 0;
+}
+
+.highlight:last-child {
+	margin: 0;
+}
+
+pre {
+	background: #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #cdcdcd;
+	-moz-box-shadow: 0 1px 0 #fff,0 1px 3px rgba(0,0,0,.1) inset;
+	-webkit-box-shadow: 0 1px 0 #fff,0 1px 3px rgba(0,0,0,.1) inset;
+	box-shadow: 0 1px 0 #fff,0 1px 3px rgba(0,0,0,.1) inset;
+	color: #000;
+	font: 12px Monaco, monospace;
+	overflow-x: auto;
+	padding: 12px;
+	white-space: pre;
+	word-wrap: normal;
+}
+
