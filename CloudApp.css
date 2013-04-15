@@ -175,6 +175,10 @@ a:link, a:visited {
 	text-decoration: none;
 }
 
+a:hover {
+	color: #114591;
+}
+
 abbr {
 	border-bottom: 1px dotted #bbb;
 	color: #666;
